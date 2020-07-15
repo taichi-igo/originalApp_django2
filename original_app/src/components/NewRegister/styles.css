@@ -1,0 +1,11 @@
+.register-top {
+  font-size: 30px;
+  background-color: blue;
+  color: white;
+  width: 200px;
+  text-align: center;
+}
+
+.register-item {
+  margin: 20px 0px;
+}

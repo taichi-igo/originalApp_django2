@@ -1,0 +1,55 @@
+a {
+  color: black;
+}
+
+a:hover {
+  color: orange;
+}
+
+li {
+  list-style: none;
+}
+
+ul li {
+  display: inline-block;
+}
+
+.menu-item {
+  width: 200px;
+  text-align: center;
+
+}
+
+.menu-item-container {
+  background-color: aqua;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+}
+
+.menu {
+  text-align: center;
+  border-bottom: 1px solid black;
+  height: 20vh;
+  /* background-color: blue; */
+  align-items: flex-end;
+  position: relative;
+}
+
+.content {
+  padding: 50px;
+}
+
+.login {
+  float: right;
+}
+
+.login-item {
+  float: right;
+  margin-right: 20px;
+}
+
+.title {
+  font-size: 30px;
+  text-align: center;
+}
