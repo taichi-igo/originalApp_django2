@@ -12,6 +12,7 @@ class NewRegister extends React.Component {
 		super(props);
 
 		this.state = {
+      occupations: [],
 			occupation_id: "",
       username: "",
       email: "",
@@ -21,13 +22,21 @@ class NewRegister extends React.Component {
 		}
 	}
 
-	componentDidMount = () => {
-		this.postUser();
-	}
+  componentDidMount = () => {
+    this.fetchOccupations()
+  }
+
+  fetchOccupations = () => {
+    axios.get('occupations/')
+    .then((response) => {
+      console.log(response)
+      this.setState({ occupations: response.data})
+    })
+  }
 
 	/* 新規ユーザー登録する */
 	postUser = async() => {
-		axios.post('http://localhost:8080/users/', {
+		axios.post('users/', {
 			username: this.state.username,
       email: this.state.email,
       password: this.state.password,
@@ -63,16 +72,21 @@ class NewRegister extends React.Component {
         <div className="register-item">
           <div className="register-name">パスワード</div>
           <input
+            type="password"
             value={this.state.password}
             onChange={(e) => this.setState({ password: e.target.value})}
           />
         </div>
         <div className="register-item">
           <div className="register-name">あなたの業種</div>
-          <input
+          <select
             value={this.state.occupation_id}
-            onChange={(e) => this.setState({ occupation_id: e.target.value})}
-          />
+            onChange={(e) => this.setState({ occupation_id: e.target.value})}>
+            {this.state.occupations.map((occupation, index) => {
+              return(
+              <option value={occupation.name}>{occupation.name}</option>
+            )})}
+          </select>
         </div>
         <div className="register-item">
           <div className="register-name">現住所</div>
@@ -85,7 +99,7 @@ class NewRegister extends React.Component {
           <div className="register-name">生年月日</div>
           <input
             value={this.state.birthday}
-            onChange={(e) => this.setState({ username: e.target.value})}
+            onChange={(e) => this.setState({ birthday: e.target.value})}
           />
         </div>
           <button onClick={this.postUser}>登録</button>

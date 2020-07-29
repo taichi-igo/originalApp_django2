@@ -1,5 +1,8 @@
+
+
 .needs-detail {
   margin: 20px;
+  border-top: 1px solid black;
 }
 
 .occupation {
@@ -9,4 +12,6 @@
   font-size: 40px;
   color: white;
   margin-bottom: 20px;
+  border-radius: 20px;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
 }

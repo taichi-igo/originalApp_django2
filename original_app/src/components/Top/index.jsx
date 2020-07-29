@@ -31,13 +31,14 @@ fetchOccupations = () => {
   render() {
     return (
       <div>
+        <div className="title-top">業種別ニーズ一覧</div>
         <Row className="occupation-list">
           {this.state.occupations.map((occupation, index) => {
             console.log(occupation, index)
             return (
               <Col xs={12} sm={6} md={4} lg={3} key={index}>
                 <Link to={`needs/${occupation.name}`}>
-                  <div className="occupation-button">{occupation.name}</div>
+                  <div className={`occupation-button occupation-button-${index}`}><p>{occupation.name}</p></div>
                 </Link>
 
               </Col>

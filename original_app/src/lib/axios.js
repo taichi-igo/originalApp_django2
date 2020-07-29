@@ -6,8 +6,8 @@ export default Axios.create({
 	headers: {
 		"Content-Type": "application/json",
 		// Authorization: `token ${localStorage.getItem('needstation-token')}`
-		Authorization: `token 522ac8cba9f6fc2771384ec0d1708df4cf10883d`
-		// "Authorization": "Token " + localStorage.getItem("twitter-token")
+		// Authorization: `token 522ac8cba9f6fc2771384ec0d1708df4cf10883d`
+		// "Authorization": "Token " + localStorage.getItem("needsstation-token")
 	},
 })
 

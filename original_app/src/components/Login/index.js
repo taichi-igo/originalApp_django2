@@ -20,10 +20,10 @@ export default class Login extends React.Component {
 
 		if (errors.length===0) {
 			const response = await axios.post('/rest-auth/login/', {
-				username: this.state.email,
+				email: this.state.email,
 				password: this.state.password,
 			})
-			localStorage.setItem("twitter-token", response.data.key);
+			localStorage.setItem("needsstation-token", response.data.key);
 			this.props.history.push('/');
 
 		}
