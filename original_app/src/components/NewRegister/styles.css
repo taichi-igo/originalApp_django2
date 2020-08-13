@@ -1,0 +1,13 @@
+.register-top {
+  font-size: 30px;
+  background-color: grey;
+  color: white;
+  width: 200px;
+  text-align: center;
+  border-radius: 10px;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+.register-item {
+  margin: 20px 0px;
+}

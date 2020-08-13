@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css?family=Londrina+Shadow');
+@import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c');
+
+
+.App {
+  background-image: url("01-fabric-shirt.png");
+}
+
+a:hover {
+  color: orange;
+}
+
+li {
+  list-style: none;
+}
+
+li a {
+  color: white;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+ul li {
+  display: inline-block;
+  border-right: 1px solid #bbbbbb;
+  height: 50px;
+  line-height: 50px;
+}
+
+li:first-child {
+  border-left: 1px solid #bbbbbb;
+}
+
+.login a {
+  color: black;
+}
+
+.menu-item {
+  width: 200px;
+  text-align: center;
+}
+
+.menu-item-container {
+  background-color: #1b2538;
+  position: absolute;
+  bottom: -70px;
+  width: 100%;
+  height: 50px;
+  margin-top: 20px;
+}
+
+.menu {
+  text-align: center;
+  /* border-bottom: 1px solid black; */
+  height: 20vh;
+  /* background-color: blue; */
+  align-items: flex-end;
+  position: relative;
+}
+
+.content {
+  padding: 100px;
+}
+
+.content a {
+  color: black;
+}
+
+.login {
+  float: right;
+}
+
+.header {
+  /* float: right; */
+}
+
+.login-item {
+  float: right;
+  margin-right: 20px;
+}
+
+.title {
+  font-size: 100px;
+  height: 110px;
+  text-align: center;
+  font-family: 'Londrina Shadow', cursive;
+}
