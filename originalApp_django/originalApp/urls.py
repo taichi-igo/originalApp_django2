@@ -4,7 +4,7 @@ from django.urls import path, include
 from rest_framework import routers
 
 from needs.views import NeedViewSet
-from user.views import UserViewSet
+from user.views import UserViewSet, is_login
 from master.views import OccupationViewSet
 
 router = routers.DefaultRouter()
@@ -15,6 +15,7 @@ router.register('occupations', OccupationViewSet)
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(router.urls)),
+    path('islogin/', is_login),
     path('rest-auth/', include("rest_auth.urls")),
     path('rest-auth/registration/', include("rest_auth.registration.urls")),
 ]

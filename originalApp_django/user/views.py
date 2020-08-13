@@ -2,6 +2,7 @@ from django.core.exceptions import ObjectDoesNotExist
 from django.shortcuts import render
 from rest_framework import viewsets
 from rest_framework import status
+from rest_framework.decorators import api_view
 from datetime import datetime
 
 from user.models import User
@@ -12,6 +13,19 @@ from rest_framework.decorators import action
 from rest_framework.response import Response
 from master.models import Occupation
 from copy import copy
+
+
+@api_view(['POST'])
+def is_login(request):
+    if request.user.is_anonymous:
+        return Response(False)
+
+    if request.user == None:
+        return Response(False)
+
+    print("User" ,request.user)
+    return Response(True)
+
 
 class UserViewSet(viewsets.ModelViewSet):
 
@@ -28,6 +42,8 @@ class UserViewSet(viewsets.ModelViewSet):
     # users/ POST
     def create(self, request):
         params = request.data
+        print(params["email"])
+        print(params)
 
         if "email" not in params:
             return Response("emailを指定してください", status=status.HTTP_400_BAD_REQUEST)
@@ -39,7 +55,7 @@ class UserViewSet(viewsets.ModelViewSet):
             return Response("このメールアドレスは既に使用されています", status=status.HTTP_400_BAD_REQUEST)
 
         user_manager = UserManager()
-        user = user_manager.create_user(params["email"], params["password"], occupation_id=1, username="user A")
+        user = user_manager.create_user(params["email"], params["occupation_id"], params["password"], username=params["username"], address=params["address"], birthday=params["birthday"])
         data = UserSerializer(user).data
         return Response(data, status=status.HTTP_201_CREATED)
     # def create(self, request):

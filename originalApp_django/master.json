@@ -1,4 +1,1 @@
-[
-  {"model": "master.occupation", "fields": {"name": "航空"}},{
-    "model": "master.occupation", "fields": {"name": "飲食"}},
-    {"model": "master.occupation", "fields": {"name": "アパレル"}}]
+[{"model": "master.occupation", "pk": 1, "fields": {"name": "\u5efa\u7bc9"}}, {"model": "master.occupation", "pk": 2, "fields": {"name": "\u533b\u7642"}}, {"model": "master.occupation", "pk": 3, "fields": {"name": "\u30aa\u30d5\u30a3\u30b9\u696d\u52d9"}}, {"model": "master.occupation", "pk": 4, "fields": {"name": "\u822a\u7a7a"}}, {"model": "master.occupation", "pk": 5, "fields": {"name": "\u98f2\u98df"}}, {"model": "master.occupation", "pk": 6, "fields": {"name": "\u8fb2\u696d"}}, {"model": "master.occupation", "pk": 7, "fields": {"name": "\u6559\u80b2"}}, {"model": "master.occupation", "pk": 8, "fields": {"name": "\u798f\u7949"}}, {"model": "master.occupation", "pk": 9, "fields": {"name": "\u88fd\u9020\u696d"}}]
